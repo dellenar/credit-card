@@ -31,12 +31,6 @@ main{
     gap: 25rem;
 }
 
-@media screen and (min-width: 1600px) {
-    main{
-        gap: 40rem;
-    }
-}
-
 /* CARD SIDE START */
 .left-side{
     background-image: url('../images/bg-main-desktop.png');
@@ -67,15 +61,20 @@ main{
 }
 
 .cardName{
-    display: flex;
     position: absolute;
     top: 36%;
     left: 16%;
-    gap: 10rem;
     color: var(--clr-white);
     letter-spacing: 2px;
 }
 
+.cardDate{
+    position: absolute;
+    top: 36%;
+    left: 34%;
+    color: var(--clr-white);
+    letter-spacing: 2px;
+}
 .cardBack{
     position: absolute;
     top: 45%;
@@ -92,7 +91,7 @@ main{
 /* CARD SIDE END */
 
 /* INPUT SIDE START */
-.right-side{
+.form{
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -102,6 +101,11 @@ main{
 input{
     padding: 1rem 0.7rem;
     border-radius: 10px;
+}
+
+input:focus{
+    border: 2px solid hsl(278, 94%, 30%);
+    outline: none;
 }
 
 .month, 
@@ -129,28 +133,25 @@ input{
     color: var(--clr-v-d-violet);
 }
 /* ERRORS - START */
-.error_1, 
+.error_1,
 .error_2{
     margin-top: -1.5rem;
     margin-left: 0.2rem;
     font-size: 0.8rem;
-    color: var(--clr-input-error);
+    color: var(--clr-input-error);  
     display: none;
 }
 
-.bottom-error-1, 
-.bottom-error-2{
+.bottom_errors{
     display: flex;
+    margin-top: 1.8rem;
 }
 
-.bottom-error-1{
+
+.bottom_errors .error_1{
     gap: 6.5rem;
 }
 
-.bottom-error-2{
-    margin-top: -2rem;
-    gap: 1.2rem;
-}
 /* ERRORS END */
 .btn-1{
     color: var(--clr-white);
@@ -168,4 +169,55 @@ input{
 .btn-1:hover{
     opacity: 0.7;
     cursor: pointer;
+}
+/* INPUT SIDE END */
+/* after submit - start */
+.submit{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+   
+}
+
+.completeIcon img{
+    width: 120px;
+}
+
+.submit article h2{
+    letter-spacing: 2px;
+    color: var(--clr-v-d-violet);
+}
+
+.submit article p{
+    color: var(--clr-d-g-violet);
+    margin-top: 1rem;
+}
+
+.btn-2{
+    color: var(--clr-white);
+    background: var(--clr-v-d-violet);
+    font-family: var(--ff);
+    font-size: var(--fs);
+    font-weight: var(--fw-500);
+    letter-spacing: 1px;
+    border-radius: 10px;
+    border: none;
+    margin-top: -1rem;
+    padding: 1rem;
+    width: 350px;
+}
+
+.btn-2:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+/* after submit ends */
+/* responsive start */
+@media screen and (min-width: 1600px) {
+    main{
+        gap: 40rem;
+    }
 }

@@ -13,60 +13,113 @@
 <body>
   <main>
     <section class="left-side">
+      <!-- Card Front Img Start -->
       <div class="cardFront">
         <img src="images/bg-card-front.png" alt="frontside">
       </div>
+      <!-- Card Front Img End -->
+      <!-- Card Front Logo Start -->
       <div class="cardLogo">
         <img src="images/card-logo.svg" alt="logo">
       </div>
+      <!-- Card Front Logo End -->
+      <!-- Card Front Number Start -->
       <div class="cardNumber">
         <h1>0000 0000 0000 0000</h1>
       </div>
+      <!-- Card Front Number End -->
+      <!-- Card Front Name Start -->
       <div class="cardName">
         <p>Jane Appleseed</p>
+      </div>
+      <!-- Card Front Name End -->
+      <!-- Card Front Date Start -->
+      <div class="cardDate">
         <p>00/00</p>
       </div>
+      <!-- Card Front Date End -->
+      <!-- Card Back Start -->
       <div class="cardBack">
           <img src="images/bg-card-back.png" alt="backside">
           <p class="cvc">000</p>
       </div>
+        <!-- Card Back End -->
     </section>
+    <!-- FORM START -->
     <section class="right-side">
-      <span class = "holderText">CARDHOLDER NAME</span>
-      <input type="text" placeholder="e.g. Jane Appleseed">
-        <p class="error_1">Can't be blank</p>
-        <p class="error_2">Wrong format, Letters only</p>
-      <span class = "numberText">CARD NUMBER</span>
-      <input type="text" placeholder="e.g. 1234 5678 9123 0000 ">
-      <p class="error_1">Can't be blank</p>
-        <p class="error_2">Wrong format, Numbers only</p>
-      <div class="tag">
-        <span>EXP. DATE (MM/YY)</span>
-        <span>CVC</span>
-      </div>
-      <div class="bottom-form">
-        <input class="month" type="text" placeholder="MM">
-        <input class="year" type="text" placeholder="YY">
-        <input type="text" placeholder="e.g. 123">
-      </div>
-      <div class="bottom-error-1">
-        <p class="error_1">Can't be blank</p>
-        <p class="error_1">Can't be blank</p>
-      </div>
-      <div class="bottom-error-2">
-        <p class="error_2">Wrong format, Numbers only</p>
-        <p class="error_2">Wrong format, Numbers only</p>
-      </div>
-      <button class="btn-1" id="btn">Confirm</button>
+      <section class="form">
+        <!-- Name Form Start -->
+        <span class = "holderText">CARDHOLDER NAME</span>
+        <input type="text" placeholder="e.g. Jane Appleseed">
+        <div class="errors">
+          <p class="error_1">Can't be blank</p>
+          <p class="error_2">Wrong format, Letters only</p>
+        </div>
+        <!-- Name Form End -->
+        <!-- Number Form Start -->
+        <span class = "numberText">CARD NUMBER</span>
+        <input type="text" placeholder="e.g. 1234 5678 9123 0000 ">
+        <div class="errors">
+          <p class="error_1">Can't be blank</p>
+          <p class="error_2">Wrong format, Numbers only</p>
+        </div>
+        <!-- Number Form End -->
+        <!-- Date & CVC Form Start -->
+        <div class="tag">
+          <span>EXP. DATE (MM/YY)</span>
+          <span>CVC</span>
+        </div>
+        <div class="bottom-form">
+          <div>
+            <input class="month" type="text" placeholder="MM">
+            <div class="bottom_errors">
+              <p class="error_1">Can't be blank</p>
+              <p class="error_2">Wrong format, <br> Numbers only</p>
+            </div>
+          </div>
+          <div>
+            <input class="year" type="text" placeholder="YY">
+            <div class="bottom_errors">
+              <p class="error_1">Can't be blank</p>
+              <p class="error_2">Wrong format, <br> Numbers only</p>
+            </div>
+          </div>
+          <div>
+            <input type="text" placeholder="e.g. 123" maxlength="3">
+            <div class="bottom_errors">
+              <p class="error_1">Can't be blank</p>
+              <p class="error_2">Wrong format, Numbers only</p>
+            </div>
+          </div>
+        </div>
+        <!-- Date && CVC Form End -->
+        <!-- Confirm Button Start -->
+        <button class="btn-1" id="btn">Confirm</button>
+        <!-- Confirm Button End -->
+      </section>
+      <!-- FORM END -->
+      <!-- Submit Screen Start -->
+      <!-- Submit Icon Start -->
+      <section class="submit">
+        <picture class="completeIcon">
+          <img src="images/icon-complete.svg" alt="">
+        </picture>
+        <!-- Submit Icon End -->
+        <!-- Submit Text Content Start -->
+        <article>
+          <h2>THANK YOU!</h2>
+          <p>  We've added your card details</p>
+        </article>
+        <!-- Submit Text Content End -->
+        <!-- Continue Button Start -->
+        <button class="btn-2" id="continue">
+          Continue
+        </button>
+        <!-- Continue Button End -->
+      </section> 
+      <!-- Submit Screen End -->
     </section>
   </main>
-
-  <!-- 
-  Completed state start
-
-  Thank you!
-  We've added your card details
-  Continue -->
-   
+   <script src="JS/app.js"></script>
 </body>
 </html>
