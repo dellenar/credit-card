@@ -10,8 +10,10 @@ submitButton.addEventListener('click', () => {
     for(let i = 0; i < inputs.length; i++){
         if(inputs[i].value == ""){
             error_1[i].style.display = 'block'
+            inputs[i].style.borderColor = 'lightcoral'
         }else{
             error_1[i].style.display = 'none'
+            inputs[i].style.borderColor = ''
         }
     }
 })
