@@ -31,8 +31,8 @@ submitButton.addEventListener('click', () => {
   submitButton.addEventListener('click', () => {
     for (let i = 1; i < inputs.length; i++) {
         const inputValue = inputs[i].value;
-        const hasNumbers = /[^0-9]/.test(inputValue);
-        const hasSpecialChars = /^[0-9]+$/.test(inputValue);
+        const hasNumbers = /[^0-9\s]/.test(inputValue);
+        const hasSpecialChars = /^\d+(\s\d+)*$/.test(inputValue);
       if (!hasSpecialChars && hasNumbers) {
         error_2[i].style.display = 'block';
       } else {
