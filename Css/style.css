@@ -48,30 +48,30 @@ main{
 
 .cardLogo{
     position: absolute;
-    top: 18%;
-    left: 17%;
+    top: 12%;
+    left: 8%;
 }
 
 .cardNumber{
     position: absolute;
-    top: 30%;
-    left: 16%;
+    top: 50%;
+    left: 6%;
     color: var(--clr-white);
-    letter-spacing: 5px;
+    letter-spacing: 4px;
 }
 
 .cardName{
     position: absolute;
-    top: 36%;
-    left: 16%;
+    top: 78%;
+    left: 6%;
     color: var(--clr-white);
     letter-spacing: 2px;
 }
 
 .cardDate{
     position: absolute;
-    top: 36%;
-    left: 34%;
+    top: 78%;
+    left: 75%;
     color: var(--clr-white);
     letter-spacing: 2px;
 }
@@ -219,5 +219,125 @@ input:focus{
 @media screen and (min-width: 1600px) {
     main{
         gap: 40rem;
+    }
+}
+@media screen and (max-width: 1100px) {
+    main {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        gap: 2rem;
+    }
+    /* CARD RESPONSIVE START */
+    .left-side {
+        width: 100%;
+        margin-bottom: 2rem;
+        background-image: url("../images/bg-main-mobile.png");
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: -5rem;
+    }
+
+    .cardFront img,
+    .cardBack img{
+        width: 90%;
+        
+    }
+
+    .cardFront,
+    .cardBack{
+        width: 80%;
+        position: relative;
+    }
+
+    .cardBack{
+       top: 37.5%;
+    }
+
+    .cardFront{
+       top: 15%;
+       left: 5%;
+       z-index: 1;
+    }
+    .cardLogo{
+        max-width: 10vw;
+    }
+
+    .cardNumber{
+        top: 54%;
+        font-size: 3vw;
+    }
+    .cardName{
+        top: 78%;
+        font-size: 3vw;
+    }
+
+    .cardDate{
+        top: 78%;
+        left: 55%;
+        font-size: 3vw;
+    }
+
+    .cvc{
+        top: 42%;
+        left: 68%;
+        font-size: 3vw;
+    }
+    /* CARD RESPONSIVE END */
+    /* FORM SIDE */
+    .right-side{
+        width: 90%;
+        margin: 2.6rem 0;
+    }
+
+    .form{
+        gap: 1rem;
+        margin: 0;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    .holderText,
+    .numberText,
+    .tag{
+        margin-bottom: -0.5rem;
+        gap: 0;
+    }
+
+    .tag span:last-child{
+        position:sticky;
+        left: 70%;
+    }
+
+    .month,
+    .year,
+    .cv{
+        width: 100%;
+    }
+ 
+    .bottom-form{
+        width: 100%;
+        gap: 0.5rem;
+        display: flex;
+    }
+    
+    .bottom-form div:last-child{
+        flex-grow: 2;
+    }
+
+    .error_1,
+    .error_2{
+        margin-top: -0.9rem;
+    }
+
+    .bottom_errors{
+        margin-top: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .btn-1{
+        margin-bottom: 1rem;
     }
 }

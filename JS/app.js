@@ -86,7 +86,7 @@ cardNumberInput.addEventListener('input', () => {
 
 // Live Update Inputs
 
-const cardNumber = document.querySelector('.cardNumber h1')
+const cardNumber = document.querySelector('.cardNumber')
 const cardName = document.querySelector('.cardName')
 const cardDate = document.querySelector('.cardDate')
 const CVC = document.querySelector('.cvc')
